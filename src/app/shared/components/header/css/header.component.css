@@ -1,0 +1,34 @@
+.example-container {
+  display: flex;
+  height: 100vh;
+  position: relative;
+}
+.example-container .example-sidenav {
+  width: 200px;
+  height: 100vh;
+  background-color: #303030;
+  border: none;
+}
+.example-container .example-sidenav .content-info-perfil {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  border-bottom: white 1px solid;
+}
+.example-container .example-sidenav .content-info-perfil .content-info-perfil__img img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.example-container .example-sidenav .content-info-perfil .content-info-perfil__name p {
+  color: white;
+}
+.example-container .example-sidenav-content {
+  background-color: aqua;
+  position: absolute;
+  height: 40px;
+  top: 0;
+  right: -20px;
+}/*# sourceMappingURL=header.component.css.map */

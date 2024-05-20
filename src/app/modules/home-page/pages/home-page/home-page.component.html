@@ -1,0 +1,82 @@
+<div class="conteiner-landing-page">
+    <div class="content-landing-page__nav">
+      <div class="logo">
+        <p>Don Arturo</p>
+      </div>
+      <div class="menu">
+        <a href="#">Inicio</a>
+        <a href="#">Productos</a>
+        <a >{{userData?.firstname}}</a>
+        <a class="button-login" (click)="redirect(1)" *ngIf="!loginOn">Login</a>
+        <a class="button-login" (click)="logOut()" *ngIf="loginOn">Logout</a>
+      </div>
+    </div>
+    <section class="banner">
+      <img src="../../../../../assets/banner1.webp" alt="banner" class="fitBg" />
+      <div class="content">
+        <form class="example-form">
+          <mat-form-field class="example-full-width">
+            <mat-label>Productos</mat-label>
+            <input
+              type="text"
+              matInput
+              [formControl]="myControl"
+              [matAutocomplete]="auto"
+            />
+            <mat-autocomplete
+              #auto="matAutocomplete"
+              class="mat-autocomplete"
+              [displayWith]="displayFn"
+            >
+              <mat-option
+                *ngFor="let option of filteredOptions | async"
+                [value]="option"
+                class="mat-option"
+              >
+                <div>
+                  {{ option.name }}
+                </div>
+                <div class="disponibilidad">Disponibilidad: {{ option.stock }}</div>
+              </mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+        </form>
+  
+        <a href="#about" class="btn">Ver más</a>
+      </div>
+      <div class="info">
+        <h2>Bienvenidos</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi eos quam
+          quasi id molestias cumque, delectus eius aperiam veniam culpa expedita
+          provident molestiae laboriosam, dicta, excepturi obcaecati qui
+          perspiciatis at.
+        </p>
+      </div>
+    </section>
+    <div class="content-footer">
+      <div class="participantes">
+        <ul class="sci">
+          <li>Alberto Ulin</li>
+          <li>Gabriela Ortiz</li>
+          <li>Candy Carrillo</li>
+          <li>Mercedes Wyss</li>
+          <li>Jose</li>
+        </ul>
+      </div>
+      <div class="redes">
+        <ul class="sci">
+          <li> <a href="#"><mat-icon svgIcon="custom_icon_facebook"></mat-icon></a></li>
+          <li><a href="#"><mat-icon svgIcon="custom_icon_instagram"></mat-icon></a></li>
+          <li><a href="#"><mat-icon svgIcon="custom_icon_github"></mat-icon></a></li>
+      </ul>
+      </div>
+      <div class="copy-right">
+        <h4 class="copyright">Copyright ©2024 <a href="#">7mo Semestre ingeniería en sistemas</a>. All rights reserved.</h4>
+      </div>
+      <div class="info-curso">
+        <p>Proyecto en conjunto de arquitectura de sistemas II y bases de datos III</p>
+      </div>
+    </div>
+  </div>
+  

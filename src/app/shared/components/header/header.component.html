@@ -1,0 +1,34 @@
+<div class="container-header">
+  <mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+      <div class="content-info-perfil">
+        <div class="content-info-perfil__img">
+          <img
+            src="https://www.w3schools.com/howto/img_avatar.png"
+            alt="Avatar"
+            class="avatar"
+          />
+        </div>
+        <div class="content-info-perfil__name">
+          <p>John Doe</p>
+        </div>
+      </div>
+      <p>Auto-resizing sidenav</p>
+      <button (click)="showFiller(1)" mat-raised-button>
+        Toggle extra text
+      </button>
+      <button (click)="showFiller(2)" mat-raised-button>
+        Toggle extra text
+      </button>
+    </mat-drawer>
+    <div class="example-sidenav-content">
+      <button type="button" mat-button (click)="drawer.toggle()">
+        <mat-icon
+          aria-hidden="false"
+          aria-label="Example home icon"
+          fontIcon="reorder"
+        ></mat-icon>
+      </button>
+    </div>
+  </mat-drawer-container>
+</div>

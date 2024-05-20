@@ -1,0 +1,34 @@
+<mat-sidenav-container class="container-home-products">
+  <mat-sidenav class="example-sidenav" #sidenav mode="side" opened="true">
+    <div class="content-info-perfil">
+      <div class="content-info-perfil__img">
+        <img
+          src="https://www.w3schools.com/howto/img_avatar.png"
+          alt="Avatar"
+          class="avatar"
+        />
+      </div>
+      <div class="content-info-perfil__name">
+        <p>John Doe</p>
+      </div>
+    </div>
+    <mat-nav-list>
+      <a mat-list-item href="#">Inicio</a>
+      <a mat-list-item href="#">Productos</a>
+      <a mat-list-item href="#">Servicios</a>
+      <a mat-list-item href="#">Contacto</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar>
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>Mi Aplicación</span>
+    </mat-toolbar>
+    <!-- Contenido principal aquí -->
+    <div class="home-wrapper">
+      <router-outlet name="child"></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
