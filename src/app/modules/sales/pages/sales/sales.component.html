@@ -1,16 +1,74 @@
-<div class="conteiner-landing-page">
-    <div class="content-landing-page__nav">
-    <div class="logo">
-        <p>Don Arturo</p>
-      </div>
-      <div class="menu">
-        <a href="home">Inicio</a>
-        <a href="#">Productos</a>
-        <a href="sales">Venta</a>
-        <link rel="stylesheet" href="css/sales.component.css">
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-      </div>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="css/sales.component.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <div class="conteiner-landing-page">
+            <div class="content-landing-page__nav">
+                <div class="logo">
+                    <p>Don Arturo</p>
+                </div>
+                <div class="menu">
+                    <a href="home">Inicio</a>
+                    <a href="#">Productos</a>
+                    <a href="sales">Venta</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <div class="cart">
+        <div class="cart-title">
+            <div class="cart-content">
+                <div class="cart-box">
+                    <img src="assets/img/tortrix.jpg" alt="" class="cart-img">
+                    <div class="detail-box">
+                        <div class="cart-product-title">Tortrix</div>
+                        <div class="cart-price">Q. 1.00</div>
+                        <input type="number" value="1" class="cart-quantity">
+                    </div>
+                    <i class='bx bxs-trash-alt cart-remove' ></i>
+                </div>
+            </div>
+            <div class="total">
+                <div class="total-title">Total</div>
+                <div class="total-price">Q. 0.00</div>
+            </div>
+            <button type="button" class="btn-buy">Vender</button>
+            <i class='bx bx-x' id="close-cart"></i>
+        </div>
     </div>
+    
+    <section class="shop container">
+        <div class="shop-content">
+            <div class="product-box">
+                <img src="assets/img/jugo.jpeg" alt="Jugo" class="product-img">
+                <h2 class="product-title">Jugo</h2>
+                <span class="price">Q. 10.00</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+            <div class="product-box">
+                <img src="assets/img/tortrix.jpg" alt="Tortrix" class="product-img">
+                <h2 class="product-title">Tortrix</h2>
+                <span class="price">Q. 1.00</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+            <div class="product-box">
+                <img src="assets/img/pan.jpg" alt="Pan" class="product-img">
+                <h2 class="product-title">Pan</h2>
+                <span class="price">Q. 1.50</span>
+                <i class='bx bx-shopping-bag add-cart'></i>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+
 
 
 
@@ -70,4 +128,3 @@
     </div>
 
 </body> -->
-</div>
