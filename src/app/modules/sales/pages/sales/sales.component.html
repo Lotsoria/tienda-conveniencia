@@ -1,8 +1,19 @@
 
 
-<body class="containerSales">
-
-  <div class="cart">
+<section class="containerSales">
+  <section class="shop" *ngIf="mostrar">
+    <div class="shop-content">
+      <div class="product-box" *ngFor="let prod of productos">
+        <img src={{prod.img}} alt="Jugo" class="product-img" />
+        <h2 class="product-title">{{prod.title}}</h2>
+        <span class="price">Q. {{prod.price}}</span>
+        <i class="bx bx-shopping-bag add-cart"></i>
+        <mat-icon fontIcon="home"></mat-icon>
+      </div>
+    </div>
+  </section>
+  <div class="cart containerCard">
+    <mat-icon fontIcon="home"></mat-icon>
     <div class="cart-title">
       <div class="cart-content">
         <div class="cart-box">
@@ -23,74 +34,4 @@
       <i class="bx bx-x" id="close-cart"></i>
     </div>
   </div>
-
-  <section class="shop">
-    <div class="shop-content">
-      <div class="product-box">
-        <img src="assets/img/jugo.jpeg" alt="Jugo" class="product-img" />
-        <h2 class="product-title">Jugo</h2>
-        <span class="price">Q. 10.00</span>
-        <i class="bx bx-shopping-bag add-cart"></i>
-      </div>
-      <div class="product-box">
-        <img src="assets/img/tortrix.jpg" alt="Tortrix" class="product-img" />
-        <h2 class="product-title">Tortrix</h2>
-        <span class="price">Q. 1.00</span>
-        <i class="bx bx-shopping-bag add-cart"></i>
-      </div>
-      <div class="product-box">
-        <img src="assets/img/pan.jpg" alt="Pan" class="product-img" />
-        <h2 class="product-title">Pan</h2>
-        <span class="price">Q. 1.50</span>
-        <i class="bx bx-shopping-bag add-cart"></i>
-      </div>
-    </div>
-  </section>
-</body>
-
-<!-- <body>
-    <link rel="stylesheet" href="css/sales.component.css">
-    <div class="container">
-        <div class="left-panel">
-            <div class="search-bar">
-                <input type="text" placeholder="Search">
-            </div>
-            <div class="card-container">
-                <div class="card">Card Title</div>
-                <div class="card">Card Title</div>
-                <div class="card">Card Title</div>
-                <div class="card">Card Title</div>
-                <div class="card">Card Title</div>
-                <div class="card">Card Title</div>
-            </div>
-        </div>
-        <div class="right-panel">
-            <table class="product-table">
-                <thead>
-                    <tr>
-                        <th>Cant.</th>
-                        <th>Productos</th>
-                        <th>Q.</th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Producto 1</td>
-                        <td>Q. 00.00</td>
-                        <td><button class="delete-btn">X</button></td>
-                    </tr>
-                </tbody>
-            </table>
-            <div class="footer">
-                <div class="total">
-                    <span>Q. 00.00</span>
-                </div>
-                <button class="cf-btn">c/f</button>
-                <button class="sell-btn">Vender</button>
-            </div>
-        </div>
-    </div>
-
-</body> -->
+</section>
