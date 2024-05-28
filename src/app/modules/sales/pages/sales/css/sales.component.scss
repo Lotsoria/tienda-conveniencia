@@ -1,0 +1,130 @@
+/* Añade este CSS adicional a tu archivo existente */
+
+.shop-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-right: 400px; /* Asegura espacio suficiente para el carrito */
+}
+
+.cart {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 360px;
+    height: 100vh;
+    padding: 20px;
+    background: #fff;
+    box-shadow: -2px 0 4px hsl(0 4% 15% / 10%);
+    overflow-y: auto; /* Permite el desplazamiento si el contenido es muy largo */
+    z-index: 1000; /* Asegura que el carrito esté siempre encima */
+}
+
+.cart-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-content {
+    margin-top: 1rem;
+}
+
+.cart-box {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.cart-img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.detail-box {
+    flex-grow: 1;
+}
+
+.cart-remove {
+    cursor: pointer;
+    color: var(--main-color);
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    border-top: 1px solid #ddd;
+    margin-top: 1rem;
+}
+
+.total-title,
+.total-price {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.btn-buy {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    background-color: #19a922;
+    color: white;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.btn-buy:hover {
+    background-color: #095421;
+}
+
+#close-cart {
+    cursor: pointer;
+    color: var(--text-color);
+    font-size: 1.5rem;
+}
+
+/* Ajustes para hacer que el contenido principal no se superponga con el carrito */
+body {
+    display: flex;
+    justify-content: center;
+    margin-right: 360px; /* Asegura espacio suficiente para el carrito */
+}
+
+.container {
+    max-width: 1200px;
+    padding: 20px;
+    width: 100%;
+}
+
+.conteiner-landing-page .content-landing-page__nav {
+    justify-content: space-between;
+}
+
+.conteiner-landing-page .content-landing-page__nav .menu {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Ajuste adicional para responsividad */
+@media screen and (max-width: 768px) {
+    .shop-content {
+        margin-right: 0;
+    }
+
+    .cart {
+        width: 100%;
+        height: auto;
+        position: static;
+        box-shadow: none;
+    }
+
+    body {
+        margin-right: 0;
+    }
+}
