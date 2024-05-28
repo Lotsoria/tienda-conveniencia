@@ -4,8 +4,11 @@
         <p>Don Arturo</p>
       </div>
       <div class="menu">
-        <a href="#">Inicio</a>
+        <a href="home">Inicio</a>
         <a href="#">Productos</a>
+        <a href="sales">Venta</a>
+        <!-- <a href="#" class="logo">Venta</a>
+        <i class='bx bx-shopping-bag'></i> -->
         <a >{{userData?.firstname}}</a>
         <a class="button-login" (click)="redirect(1)" *ngIf="!loginOn">Login</a>
         <a class="button-login" (click)="logOut()" *ngIf="loginOn">Logout</a>
